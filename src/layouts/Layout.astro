@@ -1,8 +1,5 @@
 ---
-import Footer from "../components/astro/Footer.astro";
-import Nav from "../components/astro/Nav.astro";
 import ParticlesBackground from "../components/react/ParticlesBackground.tsx";
-import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -11,19 +8,60 @@ import "../styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>Alejandro Grisales | Portafolio</title>
+    <meta
+      name="description"
+      content="Portafolio de Alejandro Grisales, desarrollador web y creador de contenido."
+    />
+    <meta name="author" content="Alejandro Grisales" />
+    <meta name="keywords" content="Alejandro Grisales, portafolio, desarrollador" />
+
   </head>
   <body>
     <ParticlesBackground client:load />
-    <Nav />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <slot />
   </body>
 </html>
+<style is:global>
+  @import "tailwindcss";
 
+  @font-face {
+    font-family: "Antonio";
+    src: url("/fonts/Antonio-Thin.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Anton";
+    src: url("/fonts/Anton-Regular.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "CoconutHouse";
+    src: url("/fonts/Coconut-House.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1 {
+    font-family: "CoconutHouse", sans-serif;
+    }
+
+  h2 {
+    font-family: "Anton", sans-serif;
+  }
+
+  h3, h4, h5, h6 {
+    font-family: "Antonio", sans-serif;
+  }
+
+</style>
 <style>
   html,
   body {
@@ -32,14 +70,5 @@ import "../styles/global.css";
     height: 100%;
     color: #e6edf3;
     background-color: #0d1117;
-    font-family: "Inter", sans-serif;
-  }
-
-  main {
-    min-height: calc(100vh - 60px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 </style>

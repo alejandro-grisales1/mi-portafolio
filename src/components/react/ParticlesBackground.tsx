@@ -25,7 +25,7 @@ const ParticlesBackground = () => {
     () => ({
       background: {
         color: {
-          value: "transparent", // negro
+          value: "transparent",
         },
       },
       fpsLimit: 120,
