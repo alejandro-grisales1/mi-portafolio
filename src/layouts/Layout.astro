@@ -1,5 +1,6 @@
 ---
 import ParticlesBackground from "../components/react/ParticlesBackground.tsx";
+import BackgroundGradients1 from "../components/astro/BackgroundGradients1.astro";
 ---
 
 <!doctype html>
@@ -14,12 +15,16 @@ import ParticlesBackground from "../components/react/ParticlesBackground.tsx";
       content="Portafolio de Alejandro Grisales, desarrollador web y creador de contenido."
     />
     <meta name="author" content="Alejandro Grisales" />
-    <meta name="keywords" content="Alejandro Grisales, portafolio, desarrollador" />
-
+    <meta
+      name="keywords"
+      content="Alejandro Grisales, portafolio, desarrollador"
+    />
   </head>
   <body>
-    <ParticlesBackground client:load />
-    <slot />
+    <BackgroundGradients1>
+      <ParticlesBackground client:load />
+      <slot />
+    </BackgroundGradients1>
   </body>
 </html>
 <style is:global>
@@ -51,20 +56,26 @@ import ParticlesBackground from "../components/react/ParticlesBackground.tsx";
 
   h1 {
     font-family: "CoconutHouse", sans-serif;
-    }
+  }
 
   h2 {
     font-family: "Anton", sans-serif;
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: "Antonio", sans-serif;
   }
 
-  p, a, li, span, div {
+  p,
+  a,
+  li,
+  span,
+  div {
     font-family: "Antonio", sans-serif;
   }
-
 </style>
 <style>
   html,
